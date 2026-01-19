@@ -1,246 +1,109 @@
-📘 Campus Connect — Frontend (React + Vite)
-Overview
+# Campus Connect - Frontend (React + Vite)
 
-Campus Connect is a modern, responsive frontend web application built for University of Arkansas students to discover campus events, explore student organizations, and interact with an AI assistant (Tusk the Razorback).
+## Overview
+React-based frontend for Campus Connect, a web platform for University of Arkansas students featuring event discovery, student organizations, and an AI chatbot assistant (Tusk the Razorback).
 
-This repository contains the React + Vite frontend, focused on UI/UX, branding, and scalable component architecture.
+## What It Does
+Campus Connect frontend provides an intuitive web interface for University of Arkansas students to:
+- **Browse Campus Events**: View upcoming events with detailed information including date, time, location, and categories
+- **Explore Student Organizations**: Discover various student organizations across different categories with member information
+- **Interactive AI Chatbot**: Engage with Tusk, an Arkansas Razorbacks-themed AI assistant for student support
+- **User Authentication**: Register and login with comprehensive forms including interest selection
+- **Personalized Experience**: Select interests during signup to customize the campus experience
+- **Responsive Design**: Access the platform seamlessly across desktop, tablet, and mobile devices
 
-Live Demo
+## Tech Stack
+- **Framework**: React 18
+- **Build Tool**: Vite
+- **Styling**: Tailwind CSS
+- **UI Components**: Custom components with Arkansas Razorbacks branding
+- **State Management**: React Hooks (useState, useEffect)
 
-🔗 Frontend: https://your-vercel-link.vercel.app
-
-🔗 Backend API: https://github.com/yourusername/campus-connect-backend
-
-⚠️ Note: Backend integration is partially implemented. Frontend currently demonstrates full user flow with static data.
-
-Tech Stack
-
-React 18
-
-Vite
-
-Tailwind CSS
-
-React Hooks
-
-React Router (planned)
-
-Axios (planned)
-
-Features
-✅ Implemented
-
-Responsive navigation bar
-
-Razorbacks-themed UI (Cardinal Red #9D2235)
-
-Event cards with modal details
-
-Organization cards
-
-Login & Signup UI
-
-Interest selection UI
-
-AI chatbot UI (Tusk)
-
-Animations & transitions
-
-Clean, reusable component structure
-
-❌ Not Yet Implemented
-
-Backend API integration
-
-Authentication (JWT)
-
-Event RSVP & filtering
-
-Organization join/leave
-
-User profile persistence
-
-AI chatbot logic
-
-Project Structure
-frontend/
-├── src/
-│   ├── components/
-│   ├── pages/
-│   ├── App.jsx
-│   ├── main.jsx
-│   └── index.css
-├── public/
+## Project Structure
+```
+campus-connect/
+├── src/                   # Frontend source files
+│   ├── components/        # Reusable UI components
+│   │   ├── Navbar.jsx
+│   │   ├── Chatbot.jsx
+│   │   ├── EventCard.jsx
+│   │   └── ...
+│   ├── pages/            # Page components
+│   │   ├── Home.jsx
+│   │   ├── Events.jsx
+│   │   ├── Organizations.jsx
+│   │   ├── Login.jsx
+│   │   └── Signup.jsx
+│   ├── App.jsx           # Main app component
+│   ├── main.jsx          # Entry point
+│   └── index.css         # Tailwind imports
+├── public/               # Static assets
+├── backend/              # Django backend folder (separate)
 ├── index.html
 ├── vite.config.js
-└── tailwind.config.js
+├── tailwind.config.js
+└── package.json
+```
 
-Getting Started
-Prerequisites
+## Branding
+**University of Arkansas Razorbacks Theme**
+- Primary Color: Cardinal Red `#9D2235`
+- Mascot: Tusk (AI Chatbot)
+- Clean, modern design with school spirit
 
-Node.js 16+
+## Setup & Installation
 
-npm or yarn
+### Prerequisites
+- Node.js 16+
+- npm or yarn
 
-Installation
+### Installation
+```bash
+# Install dependencies
 npm install
+
+# Run development server
 npm run dev
 
+# Build for production
+npm run build
+```
 
-App runs at:
+Access the app at `http://localhost:5173`
 
-http://localhost:5173
+## Features
 
-Environment Variables
+### UI Components
+- **Navbar**: Responsive navigation with Arkansas Razorbacks branding
+- **Chatbot (Tusk)**: Interactive circular chatbot with pulsing animations and rainbow letter effects
+- **Event Cards**: Beautiful card design with event details and interactive modal popups
+- **Organization Cards**: Professional card layout displaying organization information
+- **Login Page**: Complete login form with Arkansas branding and validation
+- **Signup Page**: Comprehensive signup form with interest selection interface
 
-Create .env:
+### Visual Design
+- Tailwind CSS styling throughout
+- Cardinal red color scheme (#9D2235) matching University of Arkansas branding
+- Modern animations and smooth transitions
+- Polished, interactive user interface
+- Responsive design for all screen sizes
 
-VITE_API_URL=http://localhost:8000/api
+### User Experience
+- Intuitive navigation
+- Clean, modern interface
+- Interactive elements with visual feedback
+- Professional Arkansas Razorbacks theming
+- Smooth animations and transitions
 
-Design Principles
+## Technologies Used
+- React 18 with Vite
+- Tailwind CSS for styling
+- Custom animations and transitions
+- Component-based architecture
 
-Clean, modern UI
+## Contributors
+**Wahid Sultani** - Full Stack Developer  
+GitHub: [@Wahid123542](https://github.com/Wahid123542)
 
-Strong university branding
-
-Component reusability
-
-Scalable architecture
-
-Author
-
-Wahidullah Sultani
-Full Stack Developer
-
-License
-
+## License
 MIT License
-
-📕 Campus Connect — Backend (Django REST API)
-Overview
-
-This repository contains the Django REST API backend for Campus Connect.
-It handles user management, campus events, student organizations, and future AI integration.
-
-The backend is designed with scalability and clean architecture in mind.
-
-Tech Stack
-
-Django 5.x
-
-Django REST Framework
-
-SQLite (development)
-
-django-cors-headers
-
-JWT Authentication (planned)
-
-Architecture
-backend/
-├── campus_connect/
-├── users/
-├── events/
-├── organizations/
-├── blog/
-├── manage.py
-└── db.sqlite3
-
-Current Implementation Status
-✅ Implemented
-
-Django project & app setup
-
-Database models
-
-Migrations
-
-Django Admin panel
-
-CORS configuration
-
-User model setup
-
-🚧 In Progress
-
-API serializers
-
-REST viewsets
-
-URL routing
-
-🧭 Planned
-
-JWT authentication
-
-Role-based permissions
-
-Event RSVP system
-
-Organization membership management
-
-Planned API Endpoints
-Events
-GET  /api/events/
-GET  /api/events/<id>/
-POST /api/events/        (admin)
-
-Organizations
-GET  /api/organizations/
-POST /api/organizations/<id>/join/
-POST /api/organizations/<id>/leave/
-
-Users
-POST /api/users/register/
-POST /api/users/login/
-GET  /api/users/profile/
-
-Setup Instructions
-Prerequisites
-
-Python 3.8+
-
-pip
-
-virtualenv
-
-Installation
-python -m venv venv
-source venv/bin/activate
-pip install django djangorestframework django-cors-headers
-python manage.py migrate
-python manage.py createsuperuser
-python manage.py runserver
-
-
-Server runs at:
-
-http://localhost:8000
-
-Admin Panel
-http://localhost:8000/admin
-
-
-Manage users, events, and organizations directly.
-
-Environment Variables
-
-Recommended .env:
-
-SECRET_KEY=your-secret-key
-DEBUG=True
-ALLOWED_HOSTS=localhost,127.0.0.1
-CORS_ALLOWED_ORIGINS=http://localhost:5173
-
-Security (Planned)
-
-JWT authentication (simplejwt)
-
-Protected routes
-
-Token-based authorization
-
-Author
-
-Wahidullah Sultani
-Full Stack Developer

@@ -1,5 +1,6 @@
 # Campus Connect - Backend (Django REST API)
-
+Backend URL:
+https://campus-connect-0s5h.onrender.com/
 ## Overview
 Django REST API backend for Campus Connect, a comprehensive web platform for University of Arkansas students to discover campus events, join student organizations, and access AI assistance.
 
